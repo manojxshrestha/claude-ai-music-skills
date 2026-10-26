@@ -9,6 +9,9 @@ Questions? See the [FAQ](FAQ.md).
 ![Version](https://img.shields.io/github/v/release/bitwize-music-studio/claude-ai-music-skills?label=version&color=blue)
 
 > [!NOTE]
+> **This is a fork.** It tracks [bitwize-music-studio/claude-ai-music-skills](https://github.com/bitwize-music-studio/claude-ai-music-skills) and adds OpenCode support — see [OpenCode](#opencode) below. Every skill, the MCP server, and the album workflow are unchanged; the fork only adds the adapter layer and `scripts/setup-opencode.sh`. The install commands below still point at upstream, which remains the canonical project, so file issues and PRs there unless they concern the OpenCode adapter. To run this checkout instead, use `claude plugin marketplace add ./` or `scripts/setup-opencode.sh`.
+
+> [!NOTE]
 > Active development happens on the `develop` branch — `main` only receives tested, stable releases. If you run into issues, [open an issue](https://github.com/bitwize-music-studio/claude-ai-music-skills/issues) or submit a PR.
 
 ---
@@ -49,6 +52,17 @@ Concept to released album. You generate on Suno, everything else happens in the 
 Then run `/bitwize-music:setup` to detect your environment and install dependencies. Run `/bitwize-music:configure` to set your artist name and workspace paths.
 
 **Platform**: macOS, Linux, WSL2, and native Windows are all fully supported. The full test suite runs on windows-latest in CI (plus dedicated Windows legs for the MCP boot check and MuseScore PDF export) — the MCP server, state cache, non-audio workflow, and the ffmpeg audio pipeline all run natively there. Promo video works on Windows too, though it's verified by hand rather than continuously guarded (its tests mock ffmpeg). Sheet music works natively too: MuseScore PDF export is CI-verified on windows-latest, and AnthemScore transcription runs against a licensed install (its free trial exposes no CLI on any OS, so that caveat isn't Windows-specific). Python 3.11+ for the MCP server and audio tools. See the [compatibility matrix](reference/cross-platform/tool-compatibility-matrix.md) for the per-feature breakdown.
+
+### OpenCode
+
+The same `skills/` tree and MCP server run under [OpenCode](https://opencode.ai) from this checkout — no forking, no duplicated skill text.
+
+```bash
+./scripts/setup-opencode.sh          # build the venv, write config, generate slash commands
+./scripts/setup-opencode.sh --check  # verify an existing setup, change nothing
+```
+
+The script creates `~/.bitwize-music/config.yaml`, registers the skills, instructions, and MCP server in both the project `opencode.json` and `~/.config/opencode/opencode.json`, and generates a `/bitwize-music/<skill>` command for every skill. Re-running is safe: an existing config is kept, unrelated OpenCode settings are merged rather than replaced, and commands are regenerated to match the current `skills/` tree. `AGENTS.md` documents the Claude → OpenCode differences (`${CLAUDE_PLUGIN_ROOT}` substitution, inert frontmatter, no hooks, `skill`-tool routing).
 
 ---
 
@@ -125,6 +139,7 @@ tools/               Audio mastering, promo videos, sheet music, cloud uploads
 reference/           46+ docs — Suno guides, mastering workflows, genre references
 genres/              72 genre directories with production guides
 templates/           Album, track, artist, research templates
+scripts/             OpenCode wiring (setup-opencode.sh)
 tests/               4,412 tests across 14 categories
 config/              Example config and setup docs
 ```
