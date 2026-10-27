@@ -6,6 +6,10 @@ This project uses [Conventional Commits](https://conventionalcommits.org/) and [
 
 ## [Unreleased]
 
+### Added
+- **Nepali Pop genre documentation** — the genre library covered J-pop, K-pop, Mandopop, Cantopop, Thai Pop and Turkish Pop but had no entry for Nepali, despite a substantial recording history and a large streaming-era indie scene. `genres/nepali-pop/README.md` covers the Radio Nepal *adhunik geet* tradition through the 1990s Kathmandu folk-rock bands to the current singles-driven indie scene, with lyric conventions specific to Nepali (verb-final line endings, the *ta*/*timi/*tapai* register choice, the over-availability of *-ko*/*-ma*/*-le* rhymes). Added to `genres/INDEX.md` (South Asian table, alphabetical list, tempo/energy/instrumentation/vocal/mood/era quick references), `reference/suno/genre-list.md`, and both mastering preset files (`tools/mastering/genre-presets.yaml`, `skills/mastering-engineer/genre-presets.md`).
+- **`INDEX.md` genre count corrected** — it advertised 386 documentation files while 387 directories existed before this change; the count now matches the tree.
+
 ## [0.103.0] - 2026-10-13
 
 ### Added

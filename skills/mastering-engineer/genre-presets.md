@@ -1417,6 +1417,19 @@ Detailed mastering settings by genre.
 - Bass should be defined and modern; not overly sub-heavy
 - A polished, radio-ready master is appropriate for the genre's commercial orientation
 
+### Nepali Pop
+**LUFS target**: -14 LUFS
+**Dynamics**: Light-moderate compression; preserve the dynamic swing between intimate verses and fuller choruses
+**EQ focus**: Vocal presence (2-4 kHz) without harshness, body (200-500 Hz) on acoustic guitar and voice, bass definition (60-150 Hz), gentle control of 3-5 kHz on close-mic vocals
+**MCP command**: `master_audio(file, genre="nepali-pop")`
+
+**Characteristics**:
+- The voice is the arrangement; keep it forward and unsmeared rather than loudest-by-compression
+- Acoustic guitar and madal/sarangi/bansuri colour need air (8-12 kHz) without sibilance buildup
+- Bedroom-recorded sources benefit from gentle bus compression and careful de-essing more than from EQ boosts
+- Streaming-first genre: avoid competitive loudness; a restrained master suits the intimate register
+- Folk-rock tracks can take more density; solo singer-songwriter tracks should keep transient detail intact
+
 ### Turkish Pop
 **LUFS target**: -14 LUFS
 **Dynamics**: Moderate compression; preserve vocal ornamentation and melismatic delivery while maintaining radio-ready loudness
