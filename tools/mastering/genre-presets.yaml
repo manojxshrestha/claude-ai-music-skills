@@ -270,6 +270,10 @@ genres:
     target_lufs: -14.0
     cut_highmid: -1.0
     cut_highs: 0
+  nepali-pop:
+    target_lufs: -14.0
+    cut_highmid: -1.5
+    cut_highs: 0
   turkish-pop:
     target_lufs: -14.0
     cut_highmid: -1.5

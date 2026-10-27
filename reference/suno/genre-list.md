@@ -52,7 +52,7 @@ Soft Rock, Southern Rock, Stoner Rock, Surf Rock, Thrash Metal
 ```
 Adult Contemporary, Avant-garde, Bedroom, Broadway, Disco, Disco Funk,
 Dream Pop, Emo, Europop, Funk, Indie, Indie Pop, Indie Rock, J-pop,
-K-pop, Latin Pop, Lounge, Motown, Neon Pop, Noise Pop, Pop, Pop Punk,
+K-pop, Latin Pop, Lounge, Motown, Neon Pop, Nepali Pop, Noise Pop, Pop, Pop Punk,
 Pop Rock, Power Pop, Psychedelic Pop, R&B, Contemporary R&B,
 Singer-Songwriter, Soft Rock, Soul, Synth-pop, Thai Pop, Urban Contemporary
 ```
@@ -70,7 +70,7 @@ Irish Folk, Nashville Sound, Neo-Folk, Outlaw Country, Traditional Folk
 ```
 Afrobeat, Arabian, Bossa Nova, Calypso, Celtic, Cumbia, Dancehall,
 Flamenco, Forro, Highlife, Indian Classical, K-pop, Klezmer, Latin,
-Mariachi, Mediterranean, Middle Eastern, Persian, Polka, Reggae,
+Mariachi, Mediterranean, Middle Eastern, Nepali Folk, Nepali Pop, Persian, Polka, Reggae,
 Reggaeton, Salsa, Samba, Soca, Tango, Zouk
 ```
 
